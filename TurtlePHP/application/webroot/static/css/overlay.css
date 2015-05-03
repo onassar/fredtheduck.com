@@ -1,0 +1,294 @@
+div#overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+div#modal {
+    display: none;
+    height: 0;
+    left: 0;
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+div#modal div.content {
+    padding: 16px;
+    background-color: #fff;
+    width: 660px;
+    margin: 0 auto;
+    position: relative;
+    top: 112px;
+
+    border-radius: 8px;
+    box-shadow: 0 0 5px #444;
+}
+div#modal div.content a#close {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #000;
+    border-radius: 18px;
+    color: #ddd;
+    font-family: Nunito;
+    text-align: center;
+    line-height: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #000;
+    box-shadow: 0 0 5px #444;
+}
+div#modal div.content a#close:hover {
+    background-color: #fff;
+    color: #333;
+}
+div#modal div.content div#details div.project {
+    display: none;
+}
+div#modal div.content div#details div.project div.header div.image {
+    width: 86px;
+    height: 86px;
+    background: #2b2b2b;
+    background-repeat: no-repeat;
+    background-position: center center;
+background-size: 86px;
+    width: 86px;
+    height: 86px;
+
+    padding: 7px;
+    float: left;
+    margin: 0 8px 0 0;
+}
+div#modal div.content div#details div.project div.right {
+    float: left;
+}
+div#modal div.content div#details div.project div.right h2 {
+    font-family: Nunito;
+    font-size: 24px;
+    line-height: 28px;
+}
+div#modal div.content div#details div.project div.right div.when {
+    line-height: 16px;
+}
+div#modal div.content div#details div.project div.right div.where {
+    font-size: 11px;
+    color: #666;
+    line-height: 14px;
+}
+div#modal div.content div#details div.project a.visit {
+    display: block;
+    float: right;
+    color: #fff;
+    font-size: 11px;
+    height: 22px;
+    line-height: 22px;
+    text-decoration: none;
+}
+div#modal div.content div#details div.project a.visit span.copy {
+    background: #2B2B2B;
+    border-radius: 3px 0 0 3px;
+    float: left;
+    display: block;
+    padding: 0 12px;
+    border: solid #aaa;
+    border-width: 0 1px 0 0;
+}
+div#modal div.content div#details div.project a.visit span.arrow {
+    background: #2b2b2b url(/static/img/arrow.png) center center no-repeat;
+    border-radius: 0 3px 3px 0;
+    float: left;
+    display: block;
+    width: 20px;
+}
+div#modal div.content div#details div.project a.visit:hover span {
+    background-color: orange;
+    color: #2b2b2b;
+    border-color: #fff;
+}
+div#modal div.content div#details div.project a.visit:hover span.arrow {
+    background-image: url(/static/img/arrow.hover.png);
+}
+div#modal div.content div#details div.project nav {
+    margin: 16px 0 0;
+}
+div#modal div.content div#details div.project nav a {
+    padding: 0 6px 8px 0;
+    text-decoration: none;
+    float: left;
+}
+div#modal div.content div#details div.project nav a span {
+    background: #2b2b2b;
+    color: #fff;
+    font-size: 11px;
+    padding: 0 8px;
+    height: 24px;
+    line-height: 24px;
+    display: block;
+    border-radius: 3px;
+}
+div#modal div.content div#details div.project.summary nav a.summary span,
+div#modal div.content div#details div.project.screenshots nav a.screenshots span,
+div#modal div.content div#details div.project.challenges nav a.challenges span,
+div#modal div.content div#details div.project.lessons nav a.lessons span,
+div#modal div.content div#details div.project.conclusions nav a.conclusions span,
+div#modal div.content div#details div.project nav a:hover span {
+    background-color: orange;
+    color: #2b2b2b;
+}
+div#modal.portrait div#details div.portrait.project,
+div#modal.lg div#details div.lg.project,
+div#modal.coke div#details div.coke.project,
+div#modal.coke div#details div.wishbook.project,
+div#modal.coke div#details div.tims.project,
+div#modal.coke div#details div.virgin.project,
+div#modal.coke div#details div.digg.project,
+div#modal.coke div#details div.adnectar.project,
+div#modal.coke div#details div.rogers.project,
+div#modal.coke div#details div.kickapps.project,
+div#modal.coke div#details div.clearmix.project,
+div#modal.coke div#details div.mlf.project,
+div#modal.coke div#details div.th.project,
+div#modal.coke div#details div.tl.project,
+div#modal.coke div#details div.vent.project,
+div#modal.coke div#details div.hb.project,
+div#modal.coke div#details div.bl.project,
+div#modal.coke div#details div.iip.project,
+div#modal.coke div#details div.mercedes.project,
+div#modal.coke div#details div.hero.project {
+    display: block;
+}
+div#modal div.content div#details div.project div.sections {
+    margin: 8px 0 0;
+}
+div#modal div.content div#details div.project div.sections div.section {
+    display: none;
+}
+div#modal div.content div#details div.project.summary div.sections div.section.summary,
+div#modal div.content div#details div.project.screenshots div.sections div.section.screenshots,
+div#modal div.content div#details div.project.challenges div.sections div.section.challenges,
+div#modal div.content div#details div.project.lessons div.sections div.section.lessons,
+div#modal div.content div#details div.project.conclusions div.sections div.section.conclusions {
+    display: block;
+}
+div#modal div.content div#details div.project div.sections div.section.summary div.ratings {
+    float: right;
+    width: 220px;
+    margin: 0 0 32px 16px;
+}
+div#modal div.content div#details div.project div.sections div.section.summary div.ratings ul li div.copy {
+    float: left;
+    width: 111px;
+    text-align: right;
+    color: #aaa;
+    line-height: 18px;
+    font-size: 12px;
+}
+div#modal div.content div#details div.project div.sections div.section.summary div.ratings ul li div.scale {
+    float: left;
+    width: 101px;
+    margin: 0 0 0 8px
+}
+div#modal div.content div#details div.project div.sections div.section.summary div.ratings ul li div.scale div {
+    background-color: orange;
+    border-radius: 8px;
+    line-height: 10px;
+    margin: 4px 0 0;
+}
+div#modal div.content div#details div.project div.sections div.section.challenges img {
+    float: right;
+    margin: 0 0 32px 16px;
+}
+div#modal div.content div#details div.project div.sections {
+    font-size: 13px;
+}
+div#modal div.content div#details div.project div.sections p {
+    line-height: 16px;
+    color: #333;
+}
+div#modal div.content div#details div.project div.sections p a {
+    display: inline;
+}
+div#modal div.content div#details div.project div.sections ul.list li {
+    list-style-type: disc;
+    margin: 0 0 0 24px;
+    line-height: 18px;
+}
+div#modal div.content div#details div.project div.sections ul.list li a {
+    display: inline;
+}
+div#modal div.content div#details div.project div.sections div.screenshots {
+    overflow: hidden;
+    position: relative;
+}
+div#modal div.content div#details div.project div.sections div.screenshots a {
+    width: 24px;
+    height: 24px;
+    background: #2b2b2b;
+    color: #fff;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 3px;
+    margin: 0 8px;
+}
+div#modal div.content div#details div.project div.sections div.screenshots a:hover {
+    background-color: orange;
+    color: #2b2b2b;
+}
+div#modal div.content div#details div.project div.sections div.screenshots div.nav {
+    margin: 0 auto 8px;
+}
+div#modal div.content div#details div.project div.sections div.screenshots div.nav span {
+    display: block;
+    float: left;
+    background-color: #ccc;
+    border-radius: 8px;
+    width: 8px;
+    height: 8px;
+    margin: 8px 8px 0;
+}
+div#modal div.content div#details div.project div.sections div.screenshots div.nav span.active {
+    background-color: #000;
+}
+div#modal div.content div#details div.project div.sections div.screenshots a,
+div#modal div.content div#details div.project div.sections div.screenshots div.images div.image {
+    float: left;
+}
+div#modal div.content div#details div.project div.sections div.screenshots div.images {
+    width: 10000px;
+    position: relative;
+}
+div#modal div.content div#details div.project div.sections div.screenshots div.images div.image {
+    width: 660px;
+    overflow: auto;
+    height: 400px;
+}
+div#modal div.content div#details div.project div.sections div.screenshots div.images div.image img {
+    margin: 0 auto;
+}
+div#modal div.content div#details div.project div.sections div.screenshots div.images div.image::-webkit-scrollbar {
+    border-radius: 8px;
+    width: 8px;
+    background-color: #fff;
+}
+div#modal div.content div#details div.project div.sections div.screenshots div.images div.image::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 8px;
+}
+div#modal div.content div#details div.project div.sections div.screenshots div.images div.image::-webkit-scrollbar-thumb:hover {
+    background-color: #bbb;
+}
+
